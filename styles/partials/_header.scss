@@ -1,0 +1,32 @@
+header{
+    background-color: $grey;
+}
+.nav-links{
+    display: flex;
+    justify-content: flex-end;
+    height: 5vh;
+    padding: 20px;
+    li{
+        padding: 0 25px;
+        a{
+            font-size: 22px;
+        }
+    }
+}
+
+.hero{
+    margin: 0 auto;
+    // padding: 20vh 0;
+    height: 90vh;
+    color: $grey;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h1,h3{
+        text-align: center;
+    }
+    span{
+        font-style: italic;
+    }
+}

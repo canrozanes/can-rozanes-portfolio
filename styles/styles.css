@@ -1,0 +1,640 @@
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary {
+  display: block;
+}
+
+audio, canvas, video {
+  display: inline-block;
+}
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+[hidden] {
+  display: none;
+}
+
+html {
+  font-family: sans-serif;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+a:focus {
+  outline: thin dotted;
+}
+
+a:active, a:hover {
+  outline: 0;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+b, strong {
+  font-weight: 700;
+}
+
+dfn {
+  font-style: italic;
+}
+
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+code, kbd, pre, samp {
+  font-family: monospace, serif;
+  font-size: 1em;
+}
+
+pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+q {
+  quotes: \201C \201D \2018 \2019;
+}
+
+small {
+  font-size: 80%;
+}
+
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -.5em;
+}
+
+sub {
+  bottom: -.25em;
+}
+
+img {
+  border: 0;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+fieldset {
+  border: 1px solid silver;
+  margin: 0 2px;
+  padding: .35em .625em .75em;
+}
+
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0;
+}
+
+button, input {
+  line-height: normal;
+}
+
+button, html input[type=button], input[type=reset], input[type=submit] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+button[disabled], input[disabled] {
+  cursor: default;
+}
+
+input[type=checkbox], input[type=radio] {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+}
+
+input[type=search] {
+  -webkit-appearance: textfield;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+input[type=search]::-webkit-search-cancel-button, input[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+textarea {
+  overflow: auto;
+  vertical-align: top;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body, figure {
+  margin: 0;
+}
+
+legend, button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: '';
+  clear: both;
+  height: 0;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.visuallyHidden:not(:focus):not(:active) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+  clip: rect(0 0 0);
+  overflow: hidden;
+}
+
+html {
+  font-size: 125%;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-size: 0.9rem;
+  font-family: "Open Sans", sans-serif;
+  background-color: #fff;
+}
+
+body p {
+  line-height: 1.45;
+}
+
+h1, h2, h3, h4, h5 {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  color: #2b2b2b;
+  text-align: center;
+}
+
+h1 {
+  font-size: 65px;
+}
+
+h2 {
+  font-size: 50px;
+  padding: 100px 0;
+  font-weight: 500;
+  position: relative;
+  text-transform: uppercase;
+}
+
+h2:after {
+  content: "";
+  width: 200px;
+  height: 2px;
+  background: #2b2b2b;
+  position: absolute;
+  bottom: 90px;
+  left: calc(50% - 100px);
+}
+
+h2:before {
+  content: "";
+  width: 40px;
+  height: 10px;
+  background: #245C8B;
+  position: absolute;
+  bottom: 86px;
+  left: calc(50% - 20px);
+  z-index: 1;
+}
+
+h3 {
+  font-size: 35px;
+}
+
+a {
+  text-decoration: none;
+  color: #2b2b2b;
+}
+
+.button {
+  background-color: #245C8B;
+  color: white;
+  padding: 10px;
+  width: 150px;
+  display: block;
+  text-align: center;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul li {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  width: 100%;
+}
+
+.wrapper {
+  margin: 0 10%;
+  max-width: 1400px;
+}
+
+section {
+  padding-bottom: 100px;
+}
+
+i {
+  color: #245C8B;
+  font-size: 50px;
+  display: block;
+  text-align: center;
+}
+
+header {
+  background-color: #f5f4f2;
+}
+
+.nav-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  height: 5vh;
+  padding: 20px;
+}
+
+.nav-links li {
+  padding: 0 25px;
+}
+
+.nav-links li a {
+  font-size: 22px;
+}
+
+.hero {
+  margin: 0 auto;
+  height: 90vh;
+  color: #f5f4f2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.hero h1, .hero h3 {
+  text-align: center;
+}
+
+.hero span {
+  font-style: italic;
+}
+
+.about-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.about-content h2 {
+  padding: 50px;
+}
+
+.about-content .about-bio {
+  -ms-flex-preferred-size: calc(70% - 20px);
+      flex-basis: calc(70% - 20px);
+}
+
+.about-content .about-headshot {
+  -ms-flex-preferred-size: 30%;
+      flex-basis: 30%;
+  padding-left: 20px;
+}
+
+.about-content .about-headshot img {
+  border-radius: 10px;
+}
+
+.skills {
+  background-image: url("../assets/fabric_of_squares_gray.png");
+}
+
+.skills-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.skills-content .skill {
+  text-align: center;
+  padding: 20px 0;
+  margin: 0 auto;
+  width: 20%;
+}
+
+.skills-content .skill span {
+  display: block;
+}
+
+.project:nth-child(odd) {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+.project {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 50px 0;
+}
+
+.project:nth-child(odd) {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+.project:nth-child(odd) .project-details {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  text-align: right;
+  padding-left: 0;
+  padding-right: 40px;
+}
+
+.project:nth-child(odd) a {
+  margin-right: 0;
+  margin-left: 40px;
+}
+
+.project-screenshot {
+  width: 50%;
+}
+
+.project-details {
+  width: 50%;
+  padding-left: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  text-align: left;
+}
+
+.project-details h3 {
+  padding-top: 10px;
+}
+
+.project-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.projects a {
+  margin-right: 40px;
+}
+
+projects p {
+  margin: 5px 0;
+}
+
+p.project-skills {
+  margin: 0;
+  color: #245C8B;
+}
+
+.contact {
+  background-image: url("../assets/fabric_of_squares_gray.png");
+}
+
+.contact .contact-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contact .contact-container .form {
+  width: 60%;
+}
+
+.contact .contact-container .social {
+  width: 40%;
+}
+
+.form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.form .form-name {
+  margin-right: 10px;
+}
+
+.form .form-email {
+  margin-left: 10px;
+}
+
+.form .form-name, .form .form-email {
+  height: 40px;
+  display: block;
+  width: 50%;
+}
+
+.form .form-text {
+  width: 100%;
+}
+
+.form textarea {
+  height: 275px;
+  width: 100%;
+  margin: 20px 0;
+  resize: vertical;
+  min-height: 275px;
+  border: 2px solid #f5f4f2;
+  padding-top: 5px;
+}
+
+.form input {
+  border: 2px solid #f5f4f2;
+  height: 100%;
+  width: 100%;
+}
+
+.form button {
+  border: 2px solid #f5f4f2;
+}
+
+.form form {
+  width: 100%;
+}
+
+.form input, .form textarea {
+  padding-left: 5px;
+}
+
+.name-email {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.social {
+  -ms-flex-item-align: stretch;
+      align-self: stretch;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.social .social-media {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+
+.social .social-media li {
+  padding: 10px 0;
+}
+
+.social .social-media li a {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 30% 70%;
+      grid-template-columns: 30% 70%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.social .social-media li a i {
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  grid-column-end: 2;
+}
+
+.social .social-media li a span {
+  -ms-grid-column: 2;
+      grid-column-start: 2;
+  grid-column-end: 3;
+}
+
+.social .social-media li:first-child {
+  padding-top: 0;
+}
+
+.social span {
+  padding-left: 5px;
+}
+
+footer {
+  background: #245C8B;
+}
+
+footer p {
+  text-align: center;
+  padding: 2px 0;
+  margin: 0;
+  color: #fff;
+}
+/*# sourceMappingURL=styles.css.map */

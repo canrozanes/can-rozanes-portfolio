@@ -1,0 +1,99 @@
+html{
+    font-size: 125%;
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0;
+    font-size: 0.9rem;
+    font-family: $body-font;
+    background-color: $white;
+}
+body p{
+    line-height: 1.45;
+}
+
+h1,h2,h3,h4,h5{
+    margin: 0;
+    font-family: $header-font;
+    color: $black;
+    text-align: center;
+}
+
+h1{
+    font-size: 65px;
+}
+h2{
+    font-size: 50px;
+    padding: 100px 0;
+    font-weight: 500;
+    position: relative;
+    text-transform: uppercase;
+    &:after{
+        content: "";
+        width: 200px;
+        height: 2px;
+        background: $black;
+        position: absolute;
+        bottom: 90px;
+        left: calc(50% - 100px);
+    }
+    &:before{
+        content: "";
+        width: 40px;
+        height: 10px;
+        background: $accent;
+        position: absolute;
+        bottom: 86px;
+        left: calc(50% - 20px);
+        z-index: 1;
+    }
+}
+
+h3{
+    font-size: 35px;
+}
+
+a{
+    text-decoration: none;
+    color: $black;
+}
+.button{
+    background-color: $accent;
+    color: white;
+    padding: 10px;
+    width: 150px;
+    display: block;
+    text-align: center;
+}
+ul {
+    list-style:none;
+    padding: 0;
+    margin: 0;
+    li{
+        margin: 0;
+        padding: 0;
+    }
+}
+
+img{
+    max-width: 100%;
+    display: block;
+    width: 100%;
+}
+
+.wrapper{
+    margin: 0 10%;
+    max-width: 1400px;
+}
+
+section{
+    padding-bottom: 100px;
+}
+
+i{
+    color: $accent;
+    font-size: 50px;
+    display: block;
+    text-align: center;
+}

@@ -1,0 +1,50 @@
+.project:nth-child(odd){
+    flex-direction: row-reverse;
+}
+.project{
+    display:flex;
+    padding: 50px 0;
+    &:nth-child(odd){
+        flex-direction: row-reverse;
+        .project-details{
+            align-items: flex-end;
+            text-align: right;
+            padding-left: 0;
+            padding-right: 40px;
+        }
+        a{
+            margin-right: 0;
+            margin-left: 40px;
+        }
+    }
+}
+.project-screenshot{
+    width: 50%;
+}
+.project-details{
+    width: 50%;
+    padding-left: 40px;
+    h3{
+        padding-top: 10px;
+    }
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.project-links{
+    display: flex;
+}
+
+.projects a{
+    margin-right: 40px;
+}
+
+projects p{
+    margin: 5px 0;
+}
+p.project-skills{
+    margin: 0;
+    color: $accent;
+}
