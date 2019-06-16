@@ -1,32 +1,115 @@
 header{
     background-color: $grey;
 }
+
+.nav{
+    width: 100%;
+    background-color: white;
+}
 .nav-links{
     display: flex;
     justify-content: flex-end;
-    height: 5vh;
-    padding: 20px;
+    padding: 20px 0;
+    color: $white;
     li{
         padding: 0 25px;
+        &:nth-child(4){
+            padding-right: 0;
+        }
         a{
             font-size: 22px;
+            color: $black;
+            &:hover{
+                color: $accent;
+            }
         }
     }
 }
+.hide-on-desktop{
+    display: none;
+}
 
 .hero{
-    margin: 0 auto;
-    // padding: 20vh 0;
-    height: 90vh;
+    background-image: url("../assets/fabric_of_squares_gray.png");
     color: $grey;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    h1,h3{
-        text-align: center;
+    .hero-inner{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 80vh;
+        .hero-text{
+            width: 60%;
+            color: $black;
+            h1,h3, p{
+                text-align: left;
+                color: $black;
+            }
+        }
+        .headshot{
+            width: 40%;
+        }
     }
-    span{
+    .lower-weight{
+        font-weight: 400;
+    }
+    .italic{
         font-style: italic;
+    }
+}
+
+@media(max-width: 900px){
+    .hero {
+        .hero-inner{
+        flex-direction: column-reverse;
+        height: auto;
+            .hero-text{
+                width: 100%;
+                h1, h3, p{
+                    text-align: center;
+                }
+            }
+            .headshot{
+                padding: 75px 0 25px 0;
+                width: 50%;
+            }
+        }
+    }
+}
+@media(max-width: 700px){
+    .hide-on-desktop{
+        display: block;
+    }
+    .hero {
+        .hero-inner{
+            .headshot{
+                width: 80%;
+            }
+        }
+    }
+    .nav{
+        position: fixed;
+        height: 50px;
+    }
+    .nav-links{
+        flex-direction: column;
+        align-items: center;
+        // display: none;
+        position: absolute;
+        z-index: 1;
+        width: 100%;
+        background-color: #fff;
+        position: absolute;
+        top: -400px;
+        transition:all 0.3s linear;
+        li:nth-child(4){
+            padding: 20px 0;
+        }
+        li{
+            padding: 20px 0;
+            text-align: center;
+        }
+    }
+    nav input:checked + .nav-links{
+        top: 0;
     }
 }

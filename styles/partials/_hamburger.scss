@@ -1,0 +1,33 @@
+.hamburger{
+    position: absolute;
+    top: 7px;
+    right: 10px;
+    z-index: 2;
+    div{
+        width: 35px;
+        height: 5px;
+        background-color: $black;
+        margin: 6px 0;
+        border-radius: 2px;
+        transition: 0.5s ease;
+    }
+    cursor: pointer;
+}
+nav input{
+    position: absolute;
+    width: 35px;
+    height: 4px;
+    top: 7px;
+    right: 10px;
+    opacity: 0;
+}
+
+.change .bar1{
+    transform: rotate(-45deg) translate(-9px, 7px);
+}
+.change .bar3{
+    transform: rotate(405deg) translate(-8px, -7px);
+}
+.change .bar2{
+    opacity:0;
+}
