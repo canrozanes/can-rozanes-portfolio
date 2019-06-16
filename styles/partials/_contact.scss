@@ -53,7 +53,7 @@
         width: 100%;
     }
     input, textarea {
-        padding-left: 5px;
+        padding-left: 10px;
     }
 }
 
@@ -76,8 +76,15 @@
             padding: 10px 0;
             a{
                 display: grid;
-                grid-template-columns: 30% 70%;
+                grid-template-columns: 20% 80%;
                 align-items: center;
+                justify-items: start;
+                &:hover i{
+                    color: $dark-grey;
+                }
+                &:hover{
+                    color: $accent;
+                }
                 i{
                     grid-column-start: 1;
                     grid-column-end: 2
@@ -93,6 +100,57 @@
         }
     }
 }
-.social span {
-    padding-left: 5px;
+
+@media(max-width: 900px){
+    .contact{
+        .name-email{
+            flex-direction: column;
+        }
+        .contact-container{
+            flex-direction: column;
+            .form{
+                width: 100%;
+            }
+            .social{
+                padding-top: 25px;
+                width: 100%;
+                .social-media{
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    li{
+                        width: 50%;
+                    }
+                }
+            }
+            .button{
+                margin: 0 auto;
+            }
+        }
+    }
+    .form{
+        .form-name{
+            margin-right: 0px;
+            }
+        .form-email{
+            margin-left: 0px;
+            margin-top: 5px;
+            }
+        .form-name, .form-email{
+            width: 100%;
+            }
+    }
+}  
+
+@media(max-width: 700px){
+    .contact .contact-container{
+        .social{
+            margin: 0 auto;
+            .social-media{
+                flex-direction: column;
+                li{
+                    width: 100%;
+                }
+            }
+        }
+    }
 }

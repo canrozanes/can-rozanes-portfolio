@@ -41,10 +41,65 @@
     margin-right: 40px;
 }
 
-projects p{
-    margin: 5px 0;
+.projects p{
+    margin: 5px 0 20px 0;
 }
 p.project-skills{
     margin: 0;
     color: $accent;
+}
+
+@media(max-width: 1200px){
+    .project{
+        align-items: center;
+    }
+}
+
+@media (max-width: 900px){
+    .project{
+        &:nth-child(odd){
+            flex-direction: column;
+            .project-details{
+                align-items: center;
+                text-align: center;
+                padding-left: 0px;
+                padding-right: 0px;
+                width: 100%;
+                a{
+                    margin-left: 10px;
+                    margin-right: 10px;
+                }
+            }
+        }
+        .project-details{
+            width: 100%;
+            align-items: center;
+            text-align: center;
+            padding-left: 0;
+        }
+        flex-direction: column;
+        border-bottom: 2px solid $grey;
+        &:last-child{
+            border-bottom: none;
+        }
+        a{
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+    }
+}
+
+@media (max-width: 500px){
+    .project{
+        &:nth-child(odd) .project-details{
+            a{
+                margin-left: 5px;
+                margin-right: 5px;
+            }
+        }
+        a{
+            margin-left: 5px;
+            margin-right: 5px;
+        }
+    }
 }
