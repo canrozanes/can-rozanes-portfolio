@@ -347,10 +347,6 @@ header {
   color: #245C8B;
 }
 
-.hide-on-desktop {
-  display: none;
-}
-
 .hero {
   background-image: url("../assets/fabric_of_squares_gray.png");
   color: #f5f4f2;
@@ -406,48 +402,14 @@ header {
     text-align: center;
   }
   .hero .hero-inner .headshot {
-    padding: 75px 0 25px 0;
+    padding: 25px;
     width: 50%;
   }
 }
 
 @media (max-width: 700px) {
-  .hide-on-desktop {
-    display: block;
-  }
   .hero .hero-inner .headshot {
     width: 80%;
-  }
-  .nav {
-    position: fixed;
-    height: 50px;
-  }
-  .nav-links {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    position: absolute;
-    z-index: 1;
-    width: 100%;
-    background-color: #fff;
-    position: absolute;
-    top: -400px;
-    -webkit-transition: all 0.3s linear;
-    transition: all 0.3s linear;
-  }
-  .nav-links li:nth-child(4) {
-    padding: 20px 0;
-  }
-  .nav-links li {
-    padding: 20px 0;
-    text-align: center;
-  }
-  nav input:checked + .nav-links {
-    top: 0;
   }
 }
 
@@ -932,44 +894,67 @@ footer p {
   color: #fff;
 }
 
-.hamburger {
-  position: absolute;
-  top: 7px;
-  right: 10px;
-  z-index: 2;
+.menu-toggle {
+  width: 60px;
+  height: 45px;
+  position: relative;
+  margin: 50px auto;
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
   cursor: pointer;
 }
 
-.hamburger div {
-  width: 35px;
-  height: 5px;
-  background-color: #2b2b2b;
-  margin: 6px 0;
-  border-radius: 2px;
-  -webkit-transition: 0.5s ease;
-  transition: 0.5s ease;
-}
-
-nav input {
+.menu-toggle span {
+  display: block;
   position: absolute;
-  width: 35px;
-  height: 4px;
-  top: 7px;
-  right: 10px;
+  height: 9px;
+  width: 100%;
+  background: #d3531a;
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .25s ease-in-out;
+  transition: .25s ease-in-out;
+}
+
+.menu-toggle span:nth-child(1) {
+  top: 0px;
+  -webkit-transform-origin: left center;
+  transform-origin: left center;
+}
+
+.menu-toggle span:nth-child(2) {
+  top: 18px;
+  -webkit-transform-origin: left center;
+  transform-origin: left center;
+}
+
+.menu-toggle span:nth-child(3) {
+  top: 36px;
+  -webkit-transform-origin: left center;
+  transform-origin: left center;
+}
+
+.menu-toggle:checked ~ span:nth-child(1) {
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  top: -3px;
+  left: 8px;
+}
+
+.menu-toggle ~ span:nth-child(2) {
+  width: 0%;
   opacity: 0;
 }
 
-.change .bar1 {
-  -webkit-transform: rotate(-45deg) translate(-9px, 7px);
-          transform: rotate(-45deg) translate(-9px, 7px);
-}
-
-.change .bar3 {
-  -webkit-transform: rotate(405deg) translate(-8px, -7px);
-          transform: rotate(405deg) translate(-8px, -7px);
-}
-
-.change .bar2 {
-  opacity: 0;
+.menu-toggle ~ span:nth-child(3) {
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  top: 39px;
+  left: 8px;
 }
 /*# sourceMappingURL=styles.css.map */
