@@ -5,7 +5,8 @@ html{
 
 .wrapper{
     margin: 0 auto;
-    width: 80%;
+    padding-left: 10%;
+    padding-right: 10%;
     max-width: 1400px;
 }
 
@@ -102,21 +103,37 @@ i{
     display: block;
     text-align: center;
 }
+.lower-weight{
+    font-weight: 400;
+}
+.italic{
+    font-style: italic;
+}
 
 @media (max-width: 1200px){
     .wrapper{
-        width: 90%;
+        padding-left: 5%;
+        padding-right: 5%;
     }
 }
 
 @media (max-width: 900px){
     h1{
         font-size: 50px;
-}
+    }
     h2{
         font-size: 35px;
+        padding: 50px 0;
+        &:after{
+            background: $black;
+            bottom: 40px;
+        }
+        &:before{
+            content: "";
+            bottom: 36px;
+        }
     }
-    h3{
-        font-size: 25px;
+    section{
+        padding-bottom: 50px;
     }
 }

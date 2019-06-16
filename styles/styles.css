@@ -186,7 +186,8 @@ html {
 
 .wrapper {
   margin: 0 auto;
-  width: 80%;
+  padding-left: 10%;
+  padding-right: 10%;
   max-width: 1400px;
 }
 
@@ -292,9 +293,18 @@ i {
   text-align: center;
 }
 
+.lower-weight {
+  font-weight: 400;
+}
+
+.italic {
+  font-style: italic;
+}
+
 @media (max-width: 1200px) {
   .wrapper {
-    width: 90%;
+    padding-left: 5%;
+    padding-right: 5%;
   }
 }
 
@@ -304,19 +314,53 @@ i {
   }
   h2 {
     font-size: 35px;
+    padding: 50px 0;
   }
-  h3 {
-    font-size: 25px;
+  h2:after {
+    background: #2b2b2b;
+    bottom: 40px;
+  }
+  h2:before {
+    content: "";
+    bottom: 36px;
+  }
+  section {
+    padding-bottom: 50px;
   }
 }
 
-header {
-  background-color: #f5f4f2;
+nav {
+  background-color: #fff;
+  padding: 20px 0;
 }
 
-.nav {
-  width: 100%;
-  background-color: white;
+.nav-inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.nav-inner .logo {
+  z-index: 100;
+}
+
+.menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.hamburger {
+  display: none;
 }
 
 .nav-links {
@@ -326,8 +370,6 @@ header {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  padding: 20px 0;
-  color: #fff;
 }
 
 .nav-links li {
@@ -338,17 +380,43 @@ header {
   padding-right: 0;
 }
 
-.nav-links li a {
-  font-size: 22px;
-  color: #2b2b2b;
+.nav-links li:first-child {
+  padding-left: 0;
 }
 
-.nav-links li a:hover {
+.nav-links a {
+  font-size: 1rem;
+  color: #2b2b2b;
+  position: relative;
+}
+
+.nav-links a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #245C8B;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.nav-links a:hover {
   color: #245C8B;
 }
 
-.hide-on-desktop {
-  display: none;
+.nav-links a:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+.hero {
+  background-image: url("../assets/fabric_of_squares_gray.png");
 }
 
 .hero {
@@ -383,15 +451,10 @@ header {
   width: 40%;
 }
 
-.hero .lower-weight {
-  font-weight: 400;
-}
-
-.hero .italic {
-  font-style: italic;
-}
-
 @media (max-width: 900px) {
+  .hero {
+    padding-bottom: 50px;
+  }
   .hero .hero-inner {
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
@@ -409,18 +472,20 @@ header {
     padding: 75px 0 25px 0;
     width: 50%;
   }
+  .nav-inner h3 {
+    font-size: 24px;
+  }
 }
 
 @media (max-width: 700px) {
-  .hide-on-desktop {
-    display: block;
-  }
   .hero .hero-inner .headshot {
     width: 80%;
   }
-  .nav {
-    position: fixed;
-    height: 50px;
+  .hamburger {
+    display: block;
+  }
+  .menu {
+    width: 40px;
   }
   .nav-links {
     -webkit-box-orient: vertical;
@@ -431,23 +496,27 @@ header {
         -ms-flex-align: center;
             align-items: center;
     position: absolute;
+    top: -500px;
+    left: 0;
+    right: 0;
+    background: white;
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
     z-index: 1;
-    width: 100%;
-    background-color: #fff;
-    position: absolute;
-    top: -400px;
-    -webkit-transition: all 0.3s linear;
-    transition: all 0.3s linear;
   }
-  .nav-links li:nth-child(4) {
-    padding: 20px 0;
+  .menu .nav-links li {
+    padding: 10px 0;
   }
-  .nav-links li {
-    padding: 20px 0;
-    text-align: center;
+  nav {
+    z-index: 2;
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
   }
   nav input:checked + .nav-links {
-    top: 0;
+    top: 59px;
   }
 }
 
@@ -685,6 +754,10 @@ p.project-skills {
   .project a {
     margin-left: 10px;
     margin-right: 10px;
+  }
+  .project h3 {
+    font-size: 25px;
+    font-weight: 500;
   }
 }
 
@@ -933,10 +1006,8 @@ footer p {
 }
 
 .hamburger {
-  position: absolute;
-  top: 7px;
-  right: 10px;
-  z-index: 2;
+  text-align: right;
+  z-index: 200;
   cursor: pointer;
 }
 
@@ -951,12 +1022,10 @@ footer p {
 }
 
 nav input {
-  position: absolute;
   width: 35px;
   height: 4px;
-  top: 7px;
-  right: 10px;
   opacity: 0;
+  z-index: 200;
 }
 
 .change .bar1 {

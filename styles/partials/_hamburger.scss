@@ -1,8 +1,8 @@
 .hamburger{
-    position: absolute;
-    top: 7px;
-    right: 10px;
-    z-index: 2;
+    text-align: right;
+    // top: 7px;
+    // right: 10px;
+    z-index: 200;
     div{
         width: 35px;
         height: 5px;
@@ -14,12 +14,10 @@
     cursor: pointer;
 }
 nav input{
-    position: absolute;
     width: 35px;
     height: 4px;
-    top: 7px;
-    right: 10px;
     opacity: 0;
+    z-index: 200;
 }
 
 .change .bar1{
