@@ -51,7 +51,7 @@ nav{
     }
     &:hover{
         color: $accent;
-        &:before{
+        &:before, &:active{
             visibility: visible;
             -webkit-transform: scaleX(1);
             transform: scaleX(1);
@@ -82,9 +82,16 @@ nav{
     justify-content: space-between;
     width: 60%;
     color: $black;
-    h1,h3, p{
+    h1,h3,h4, p{
         text-align: left;
         color: $black;
+    }
+    h3{
+        font-size: 25px;
+        padding: 10px 0;
+    }
+    h4{
+        padding: 10px 0;
     }
 }
 .hero a{
@@ -110,7 +117,7 @@ nav{
         }
     }
     header h3{
-        font-size: 24px;
+        font-size: 20px;
     }
     .hero-text{
         align-items: center;
@@ -140,7 +147,7 @@ nav{
         background: white;
         transition: all 0.5s ease-in-out;
         z-index: 1;
-        padding: 20px 0;
+        padding-bottom: 20px;
     }
     .menu .nav-links li{
         padding: 10px 0;
@@ -153,7 +160,7 @@ nav{
         left: 0;
         right: 0;
     }
-    nav input:checked + .nav-links{
+    .change.nav-links{
         top: 59px;
     }
 }

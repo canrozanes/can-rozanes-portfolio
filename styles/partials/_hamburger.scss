@@ -13,18 +13,22 @@
     }
     cursor: pointer;
 }
+.menu{
+    // position: relative;
+}
 nav input{
-    width: 35px;
-    height: 4px;
+    width: 100%;
+    height: 100%;
     opacity: 0;
     z-index: 200;
+    // position: absolute;
 }
 
 .change .bar1{
     transform: rotate(-45deg) translate(-9px, 7px);
 }
 .change .bar3{
-    transform: rotate(405deg) translate(-8px, -7px);
+    transform: rotate(45deg) translate(-8px, -7px);
 }
 .change .bar2{
     opacity:0;

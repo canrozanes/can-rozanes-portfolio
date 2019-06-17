@@ -109,6 +109,32 @@ i{
 .italic{
     font-style: italic;
 }
+a:active{
+    box-shadow: 0 0 1pt 1pt $accent;
+}
+a:focus{
+    box-shadow: 0 0 1pt 1pt $accent;
+}
+button{
+    background: none;
+    border: none;
+    &:focus{
+        box-shadow: 0 0 1pt 1pt $accent;
+    }
+}
+.skip-link {
+   position: absolute;
+   left: -1000px;
+   top: 5px;
+   z-index: 999;
+   background: black;
+   color: white;
+}
+
+.skip-link:focus {
+   left:100px;
+   top: 50px;
+}
 
 @media (max-width: 1200px){
     .wrapper{
