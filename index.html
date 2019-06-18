@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:500i,400|Open+Sans:400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:500i,400,500, 700|Open+Sans:400&display=swap" rel="stylesheet">
     <link rel="stylesheet"
         href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
     <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png">
@@ -17,6 +17,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png">
     <link rel="manifest" href="./assets/favicon/site.webmanifest">
     <link rel="mask-icon" href="./assets/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <meta name="msapplication-TileColor" content="#2b5797">
     <meta name="theme-color" content="#ffffff">
 
@@ -41,7 +42,7 @@
                         </button>
                         <input type="checkbox" id="toggle"  disabled/>
                         <ul class="nav-links">
-                            <li><a href="#home">Home</a></li>
+                            <li><a href="#">Home</a></li>
                             <li><a href="#about">About</a></li>
                             <li><a href="#projects">Projects</a></li>
                             <li><a href="#contact">Contact</a></li>
@@ -53,7 +54,7 @@
                 <div class="hero-inner wrapper">
                     <div class="hero-text">
                         <h3>Hi, I’m <span class="italic">Can</span>. (Pronounced <span class="italic">John</span>)</h3>
-                        <h1>I’m a Front-End Developer.</h1>
+                        <h1>I’m a <span class="line">Front-End</span> Developer.</h1>
                         <h4>I build accessible and user-friendly websites. </h4>
                         <a href="https://resume.creddle.io/resume/exze526vanl" target="_blank" class="button">My Resume</a>
                     </div>
@@ -110,7 +111,7 @@
                         <img src="assets/group-react.png"
                             alt="Screenshots of Personal Date Night project shown on a desktop and an iphone screen">
                     </div>
-                    <div class="project-details">
+                    <div class="project-details" data-aos="fade-left">
                         <h3>Personal Date Night</h3>
                         <p class="project-skills">React|JavaScript|Rest API|SASS|CSS3|HTML5</p>
                         <p>Sometimes you just need a break from your partner but you already got a babysitter. Now
@@ -126,7 +127,7 @@
                         <img src="assets/commuter-react.png"
                             alt="screenshots of my project Toronto Commuter shown on a desktop and an iphone screen">
                     </div>
-                    <div class="project-details">
+                    <div class="project-details" data-aos="fade-right">
                         <h3>Toronto Commuter</h3>
                         <p class="project-skills">React|JavaScript|Rest API|CSS3|HTML5</p>
                         <p>Do you sometimes wake up and are not sure if you should bike to work today? This application
@@ -142,7 +143,7 @@
                         <img src="assets/jquery-paired.png"
                             alt="screenshots of Who Wants to be a Developer project shown on a desktop and an iphone screen">
                     </div>
-                    <div class="project-details">
+                    <div class="project-details" data-aos="fade-left">
                         <h3>Who Wants to be a Developer?</h3>
                         <p class="project-skills">JQuery|JavaScript|Rest API|SASS|CSS3|HTML5</p>
                         <p>Test your Computer Science Trivia! A computer science focused trivia game in the format of
@@ -158,7 +159,7 @@
                         <img src="assets/jquery-solo.png"
                             alt="screenshots of the Remember the Number project shown on a desktop and an iphone screen">
                     </div>
-                    <div class="project-details">
+                    <div class="project-details" data-aos="fade-right">
                         <h3>Remember Your Number!</h3>
                         <p class="project-skills">JQuery|JavaScript|SASS|CSS3|HTML5</p>
                         <p>Average human can remember upto 7 digits. How many can you remember? This is a game that
@@ -174,7 +175,7 @@
                         <img src="assets/PSD-conversion.png"
                             alt="screenshots of Mind'n Soul shown on a desktop and an iphone screen">
                     </div>
-                    <div class="project-details">
+                    <div class="project-details" data-aos="fade-left">
                         <h3>Mind'n Soul</h3>
                         <p class="project-skills">SASS|CSS3|HTML5</p>
                         <p>This project is a multipage PSD conversion to a fully responsive site using HTML and CSS.</p>
@@ -189,7 +190,7 @@
                         <img src="assets/drive-solo.png"
                             alt="screenshots of Drive Solo shown on a desktop and an iphone screen">
                     </div>
-                    <div class="project-details">
+                    <div class="project-details" data-aos="fade-right">
                         <h3>Drive Solo</h3>
                         <p class="project-skills">CSS3|HTML5</p>
                         <p>This project is a single page PSD conversion to a fully responsive site using only HTML and
@@ -245,7 +246,7 @@
     </main>
     <footer>
         <div class="wrapper">
-            <p>Built by <span class="bold">Can Rozanes (to get a job)</span></p>
+            <p>Built by <span class="bold">Can Rozanes</span> in 2019</p>
         </div>
     </footer>
     <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
@@ -253,10 +254,23 @@
     <script>
         $(document).ready(function(){
             $('.hamburger').click(function(){
-                $('.hamburger').toggleClass('change')
-                $('.nav-links').toggleClass('change')
+                $('.hamburger').toggleClass('open')
+                $('.nav-links').toggleClass('open')
+            })
+            $('.menu a').click(function () {
+                $('.hamburger').removeClass('open')
+                $('.nav-links').removeClass('open')
             })
         })
+    </script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+                disable: function () {
+                    var maxWidth = 900;
+                    return window.innerWidth < maxWidth;
+                }
+            });
     </script>
 </body>
 

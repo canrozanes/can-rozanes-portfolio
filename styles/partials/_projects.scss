@@ -92,6 +92,9 @@ p.project-skills{
         font-size: 25px;
         font-weight: 500;
     }
+    .project-screenshot{
+        width: 80%;
+    }
 }
 
 @media (max-width: 500px){
@@ -106,5 +109,8 @@ p.project-skills{
             margin-left: 5px;
             margin-right: 5px;
         }
+    }
+    .project-screenshot{
+        width: 90%;
     }
 }
