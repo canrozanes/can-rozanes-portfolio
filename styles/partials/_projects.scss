@@ -11,6 +11,9 @@
             text-align: right;
             padding-left: 0;
             padding-right: 40px;
+            h3{
+                text-align: right;
+            }
         }
         a{
             margin-right: 0;
@@ -26,6 +29,7 @@
     padding-left: 40px;
     h3{
         padding-top: 10px;
+        text-align: left;
     }
     display: flex;
     flex-direction: column;
