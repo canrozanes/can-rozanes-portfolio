@@ -578,6 +578,9 @@ nav {
   .hero-text h3 {
     font-size: 20px;
   }
+  .project-details h3 {
+    text-align: center;
+  }
 }
 
 @media (max-width: 820px) {
@@ -851,6 +854,9 @@ p.project-skills {
     padding-right: 0px;
     width: 100%;
   }
+  .project:nth-child(odd) .project-details h3 {
+    text-align: center;
+  }
   .project:nth-child(odd) .project-details a {
     margin-left: 10px;
     margin-right: 10px;
@@ -862,6 +868,9 @@ p.project-skills {
             align-items: center;
     text-align: center;
     padding-left: 0;
+  }
+  .project .project-details h3 {
+    text-align: center;
   }
   .project:last-child {
     border-bottom: none;
@@ -1146,6 +1155,10 @@ footer p {
   border-radius: 2px;
   -webkit-transition: 0.5s ease;
   transition: 0.5s ease;
+}
+
+.hamburger button::-moz-focus-inner {
+  box-shadow: 0 0 1pt 1pt #293e60;
 }
 
 nav input {
